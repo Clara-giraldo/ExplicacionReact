@@ -1,7 +1,8 @@
-import logo from './media/logo1.png';
-import './styles/App.css';
-import Pandora from './media/Pandora.jpg';
-import Tyson from './media/tyson.jpg';
+import logo from 'media/logo1.png';
+import 'styles/App.css';
+import Pandora from 'media/Pandora.jpg';
+import Tyson from 'media/tyson.jpg';
+import CardRazasPerros from './Component/CardRazasPerros'
 
 function App() {
   return (
@@ -49,15 +50,7 @@ function App() {
   );
 }
 
-function CardRazasPerros(props){
-return(
-              <li className="breedcard">
-                  <div className= "contenedorimage">
-                  <img src={props.imagen} alt={props.nombreRaza}/>
-                  </div>
-                  <span className="breedtitle">{props.nombreRaza}</span>    
-              </li>
-)
+
 
 }
 export default App;
