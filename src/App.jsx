@@ -39,29 +39,25 @@ function App() {
       <main>
       <section>
           <h1>Razas de perros</h1>
-          <ul className="breedCardContainer">
-              <li className="breedcard">
-                  <div className= "contenedorimage">
-                  <img src={Pandora} alt="Pandora"/>
-                  </div>
-                  <span className="breedtitle">Pandora</span>
-                  
-                  
-              </li>
-              <li className="breedcard">
-                  <div className= "contenedorimage">
-                  <img src={Tyson} alt="Tyson"/>
-              </div>
-              <span className="breedtitle">Tyson</span>
-                  
-              </li>
-          </ul>
+          <CardRazasPerros nombreRaza='Pandora' imagen={Pandora}/>
+          <CardRazasPerros nombreRaza='Tyson' imagen={Tyson}/>
       </section>
       <section></section>
       </main>
-
+        <footer></footer>
     </div>
   );
 }
 
+function CardRazasPerros(props){
+return(
+              <li className="breedcard">
+                  <div className= "contenedorimage">
+                  <img src={props.imagen} alt={props.nombreRaza}/>
+                  </div>
+                  <span className="breedtitle">{props.nombreRaza}</span>    
+              </li>
+)
+
+}
 export default App;
