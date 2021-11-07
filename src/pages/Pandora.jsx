@@ -1,14 +1,11 @@
-import Footer from "Component/Footer";
-import Header from "Component/Header";
+import Layout from "Layouts/Layout";
 
 function PandoraPage(){
 
     return (
-        <div>
-            <Header />
-            <div>Esta es la pagina de Pandora</div>
-            <Footer />
-        </div>
+        <Layout>
+            <div>Informacion sobre Pandora</div>
+        </Layout>
     )
 }
 

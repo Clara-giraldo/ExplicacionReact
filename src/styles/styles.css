@@ -13,6 +13,21 @@ ul{
   height: 70px;
 }
 
+.maincontainer{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.maincontainer> main{
+  height: 100%;
+}
+
+.maincontainer > footer{
+  background-color: #563caa;
+  padding: 10px;
+}
+
+
 .navbar{
   display: flex;
   justify-content: space-between;
