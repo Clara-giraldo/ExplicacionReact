@@ -1,56 +1,31 @@
-import logo from 'media/logo1.png';
-import 'styles/App.css';
-import Pandora from 'media/Pandora.jpg';
-import Tyson from 'media/tyson.jpg';
-import CardRazasPerros from './Component/CardRazasPerros'
+import Index from 'pages';
+import PandoraPage from 'pages/Pandora';
+import TysonPage from 'pages/Tyson';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import 'styles/styles.css';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      
-            <header>
-
-      <ul className="navbar">
-          <li>
-              <img src={logo} alt="Logo" className="logo"/>
-                
-          </li>
-          
-          <li>
-              <button className="Button mainButton">Nuevo post</button>
-          </li>
-          
-                  
-          
-              <li>
-                  <div className= "buscar">
-                  <input placeholder="Buscar una raza"/>
-                  <i className="fas fa-search Button iconobusqueda"></i>
-                  </div>    
-              </li>
-          
-          <li>
-              <button className="Button mainButton"> Registro </button>
-              </li>
-              <li>
-                  <button className="Button ButtonSecundary">Login </button>
-              </li>
-      </ul>
-      </header>
-      <main>
-      <section>
-          <h1>Razas de perros</h1>
-          <CardRazasPerros nombreRaza='Pandora' imagen={Pandora}/>
-          <CardRazasPerros nombreRaza='Tyson' imagen={Tyson}/>
-      </section>
-      <section></section>
-      </main>
-        <footer></footer>
+        <Router>
+            <Switch>
+                <Route path="/Pandora">
+                    <PandoraPage />
+                </Route>
+                <Route path="/Tyson">
+                    <TysonPage />
+                </Route>
+                <Route path="/">
+                    <Index />
+                </Route>
+            </Switch>
+        </Router>
     </div>
   );
-}
-
-
 
 }
 export default App;
