@@ -1,5 +1,6 @@
 import CardRazasPerros from 'Component/CardRazasPerros'
-import logo from 'media/logo1.png';
+import Footer from 'Component/Footer';
+import Header from 'Component/Header';
 import Pandora from 'media/Pandora.jpg';
 import Tyson from 'media/tyson.jpg';
 
@@ -7,35 +8,7 @@ import Tyson from 'media/tyson.jpg';
 function Index() {
     return (
         <div>
-        <header>
-
-        <ul className="navbar">
-            <li>
-                <img src={logo} alt="Logo" className="logo"/>
-                  
-            </li>
-            
-            <li>
-                <button className="Button mainButton">Nuevo post</button>
-            </li>
-            
-                    
-            
-                <li>
-                    <div className= "buscar">
-                    <input placeholder="Buscar una raza"/>
-                    <i className="fas fa-search Button iconobusqueda"></i>
-                    </div>    
-                </li>
-            
-            <li>
-                <button className="Button mainButton"> Registro </button>
-                </li>
-                <li>
-                    <button className="Button ButtonSecundary">Login </button>
-                </li>
-        </ul>
-        </header>
+        <Header />
         <main>
         <section>
             <h1>Razas de perros</h1>
@@ -44,7 +17,7 @@ function Index() {
         </section>
         <section></section>
         </main>
-          <footer></footer>
+          <Footer />
         </div>
 
     )
