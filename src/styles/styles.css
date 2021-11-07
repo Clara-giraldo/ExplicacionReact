@@ -17,9 +17,11 @@ ul{
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-y: hidden;
 }
 .maincontainer> main{
   height: 100%;
+  overflow-y: scroll;
 }
 
 .maincontainer > footer{
@@ -109,6 +111,7 @@ align-items: center;
 
 .breedCardContainer{
 display: flex;   
+flex-wrap: wrap;
 
 }
 
